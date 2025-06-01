@@ -52,10 +52,17 @@ const Projects = () => {
                 <span className="bg-teal-600 text-white text-sm px-3 py-1 rounded-full">Python</span>
                 <span className="bg-teal-600 text-white text-sm px-3 py-1 rounded-full">Data Science</span>
               </div>
-              {/* Link to your general GitHub profile if no specific repo for this project */}
-              <a href="https://github.com/vicky8275/retention-ranger" target="_blank" rel="noopener noreferrer" className="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-lg shadow-md transform transition-all duration-300 hover:scale-105">
-                View on GitHub <i className="fab fa-github ml-2"></i>
-              </a>
+              {/* Project Links */}
+              <div className="flex flex-wrap gap-4"> {/* Use flex-wrap for buttons on smaller screens */}
+                {/* Link to Live Project on Netlify */}
+                <a href="https://customer-churn-ml.netlify.app/" target="_blank" rel="noopener noreferrer" className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-md transform transition-all duration-300 hover:scale-105">
+                  View Live Demo <i className="fas fa-external-link-alt ml-2"></i>
+                </a>
+                {/* Link to GitHub Repository for the project */}
+                <a href="https://github.com/vicky8275/retention-ranger" target="_blank" rel="noopener noreferrer" className="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-lg shadow-md transform transition-all duration-300 hover:scale-105">
+                  View on GitHub <i className="fab fa-github ml-2"></i>
+                </a>
+              </div>
             </div>
           </div>
         </div>
