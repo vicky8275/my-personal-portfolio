@@ -10,7 +10,8 @@ import Footer from './components/Footer';
 
 import QuizGame from './components/QuizGame';
 import RockPaperScissorsGame from './components/RockPaperScissorsGame'; // Keep this one
-import TicTacToeGame from './components/TicTacToeGame'; // NEW: Import TicTacToeGame
+import TicTacToeGame from './components/TicTacToeGame'; // Tic-Tac-Toe Game
+import TechEmojiMemoryGame from './components/TechEmojiMemoryGame'; // NEW: Import Tech Emoji Memory Game
 
 function App() {
   const [selectedGame, setSelectedGame] = useState(null);
@@ -50,12 +51,18 @@ function App() {
                 >
                   Start Rock, Paper, Scissors!
                 </button>
-                {/* NEW: Button for Tic Tac Toe */}
                 <button
                   onClick={() => handleGameSelect('ticTacToe')}
                   className="bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full text-xl transition duration-300 shadow-lg"
                 >
                   Start Tic-Tac-Toe
+                </button>
+                {/* NEW: Button for Tech Emoji Memory Game */}
+                <button
+                  onClick={() => handleGameSelect('techEmojiMemory')}
+                  className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-4 px-8 rounded-full text-xl transition duration-300 shadow-lg"
+                >
+                  Tech Emoji Memory Game
                 </button>
               </div>
             )}
@@ -84,7 +91,7 @@ function App() {
               </div>
             )}
 
-            {/* NEW: Render TicTacToeGame when selected */}
+            {/* Render TicTacToeGame when selected */}
             {selectedGame === 'ticTacToe' && (
               <div className="flex flex-col items-center">
                 <button
@@ -94,6 +101,19 @@ function App() {
                   &larr; Back to Game Selection
                 </button>
                 <TicTacToeGame />
+              </div>
+            )}
+
+            {/* NEW: Render TechEmojiMemoryGame when selected */}
+            {selectedGame === 'techEmojiMemory' && (
+              <div className="flex flex-col items-center w-full">
+                <button
+                  onClick={handleBackToSelection}
+                  className="mb-8 bg-gray-700 hover:bg-gray-600 text-white py-2 px-4 rounded-full transition duration-300"
+                >
+                  &larr; Back to Game Selection
+                </button>
+                <TechEmojiMemoryGame />
               </div>
             )}
           </div>

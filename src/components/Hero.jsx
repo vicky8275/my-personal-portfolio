@@ -11,6 +11,8 @@ const Hero = () => {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center text-center p-6 overflow-hidden" ref={refHero}>
+      {/* Background image with overlay */}
+      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: 'url("/images/Image.png")' }}></div>
       <div className="absolute inset-0 bg-gradient-to-br from-purple-900 via-blue-900 to-gray-900 opacity-70 animate-gradient-shift"></div>
 
       <div className="relative z-10 max-w-4xl mx-auto">
